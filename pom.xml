@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.groupdocs.demo</groupId>
+    <artifactId>documents-to-markdown-chunks-for-rag</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <!-- Topic: Turn DOCX, PDF, email and ZIP files into heading-scoped Markdown chunks for a RAG index, on-premise. -->
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <groupdocs.parser.version>26.10</groupdocs.parser.version>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>groupdocs-artifact-repository</id>
+            <url>https://releases.groupdocs.com/java/repo/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.groupdocs</groupId>
+            <artifactId>groupdocs-parser</artifactId>
+            <version>${groupdocs.parser.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>documents-to-markdown-chunks-for-rag</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <mainClass>com.groupdocs.demo.RagChunksDemo</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
